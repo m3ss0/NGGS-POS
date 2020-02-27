@@ -1,0 +1,11 @@
+*.jar
+
+#Maven
+target/
+
+#Eclipse
+.settings/
+bin/
+.metadata
+.classpath
+.project

@@ -32,7 +32,7 @@ public class PrinterSetup extends Task<Void>{
 		// Create a new PrinterJob object
 		PrinterJob printJob = PrinterJob.getPrinterJob();
 
-		// Viene creato un nuovo Book per ogni ricevuta perchè se venisse usato un solo Book
+		// Viene creato un nuovo Book per ogni ricevuta perchÃ¨ se venisse usato un solo Book
 		// avrebbe le stesse dimensioni per tutte le ricevute del Book 
 		Book book = null;
 
@@ -50,7 +50,7 @@ public class PrinterSetup extends Task<Void>{
 			
 			//La pagina viene definita per ogni singola ricevuta
 			Paper paper = new Paper();
-			// 18 rappresenta altezza di ogni riga se si aumenta la dimensione del carattere è da modificare anche questo valore
+			// 18 rappresenta altezza di ogni riga se si aumenta la dimensione del carattere Ã¨ da modificare anche questo valore
 			paper.setSize(sizeX, (double) (initSizeY + listFiltered.size()*18.0));  
 			paper.setImageableArea(margin, margin, paper.getWidth() - margin * 2, paper.getHeight() - margin * 2);
 			documentPageFormat.setPaper(paper);

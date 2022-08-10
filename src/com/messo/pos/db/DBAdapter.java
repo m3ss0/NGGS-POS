@@ -139,8 +139,8 @@ public class DBAdapter {
 	
 	public boolean saveRecords(List<ComandaEntry> comanda){
 		
-		Double totalItem = new Double(0);
-		Double grandTotal = new Double(0);
+		Double totalItem = Double.valueOf(0);
+		Double grandTotal = Double.valueOf(0);
 
 		try (Connection conn = getConnection();
 				PreparedStatement ps = conn.prepareStatement("INSERT INTO ORDERS(IdProd, Nome, PrezzoUnitario, Category, Quantity, Prezzo, Data, PcName) VALUES (?,?,?,?,?,?,?,?)");){

@@ -778,9 +778,9 @@
             </Text>
          </children>
       </Pane>
-      <Label fx:id="LabelAlert" layoutX="505.0" layoutY="268.0" text="Label Alert" textFill="#f20000">
+      <Label fx:id="LabelAlert" layoutX="505.0" layoutY="268.0" text="No database connection!" textFill="#f20000">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="System Bold" size="16.0" />
          </font></Label>
    </children>
 </AnchorPane>

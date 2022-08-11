@@ -18,4 +18,9 @@ public class ComandaEntry extends Items{
 	public void setQuantity(Integer quantity) {
 		this.quantity.set(quantity);
 	}
+
+	@Override
+	public String toString() {
+		return super.getName()+" x " + quantity.get();
+	}
 }

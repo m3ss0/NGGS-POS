@@ -48,9 +48,17 @@ public class DBAdapter {
 			
 			conn.setAutoCommit(true);
 
-		} catch(SQLException se) { 
-			//Handle errors for JDBC 
-			se.printStackTrace(); 
+		} catch(SQLException se) {
+			System.out.println("Primary connection lost...Retrying with fallback connection");
+			if (UtilsCommon.logFileOn) SimpleLogger.getLogger.log("ERROR", "Primary connection lost...Retrying with fallback connection" );
+			String linkFB = UtilsCommon.getPropertyValue("db.link.fallback");
+			try {
+				conn = DriverManager.getConnection(linkFB,USER,PASS);
+				conn.setAutoCommit(true);
+			} catch (SQLException se1) {
+				//Handle errors for JDBC 
+				se.printStackTrace(); 
+			}
 		} catch(Exception e) { 
 			//Handle errors for Class.forName 
 			e.printStackTrace(); 
@@ -168,13 +176,13 @@ public class DBAdapter {
 			conn.commit();
 		
 			System.out.println("Records saved in table ORDERS");
-			if (UtilsCommon.logFileOn) SimpleLogger.getLogger.log("INFO", "Record salvati - Total: " + grandTotal.toString());
+			if (UtilsCommon.logFileOn) SimpleLogger.getLogger.log("INFO", "Record salvati - Total: " + grandTotal.toString() + "|" + comanda);
 			
 			return true;
 			
 		}catch (Exception e){
 			System.out.println("Error saving data: " + e.getMessage());
-			if (UtilsCommon.logFileOn) SimpleLogger.getLogger.log("ERROR", "Errore salvataggio - Total: " + grandTotal.toString());
+			if (UtilsCommon.logFileOn) SimpleLogger.getLogger.log("ERROR", "Errore salvataggio - Total: " + grandTotal.toString() + "|" + comanda);
 			return false;
 		}
 	}

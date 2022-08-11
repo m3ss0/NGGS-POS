@@ -31,6 +31,7 @@ public class MenuEditorController {
     
     @FXML private TextField fieldName = new TextField("");
     @FXML private TextField fieldPrice = new TextField("");
+	@FXML private TextField fieldGroup = new TextField("");
     @FXML private CheckBox checkDisabilita = new CheckBox();
     
     HashMap<String, Items> mapMenu = null;
@@ -56,7 +57,7 @@ public class MenuEditorController {
 		tColumn1.setCellValueFactory(cellData -> cellData.getValue().getNameProperty());
 		tColumn2.setText("PREZZO");
 		tColumn2.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(UtilsCommon.formatCifre(cellData.getValue().getPrice())));
-		tColumn3.setText("CAT");
+		tColumn3.setText("GROUP");
 		tColumn3.setCellValueFactory(cellData -> cellData.getValue().getCategoryProperty());
 		
 		menuTable.setOnMouseClicked(e -> onClickEvent());
@@ -69,15 +70,18 @@ public class MenuEditorController {
 		Items it = menuTable.getSelectionModel().getSelectedItem();
 		fieldName.setText(it.getName());
 		fieldPrice.setText(UtilsCommon.formatCifre(it.getPrice()));
+		fieldGroup.setText(it.getCategory());
 		
 		if (it.getName().equals("xxx")){
 			checkDisabilita.setSelected(true);
 			fieldName.setDisable(true);
 			fieldPrice.setDisable(true);
+			fieldGroup.setDisable(true);
 		} else {
 			checkDisabilita.setSelected(false);
 			fieldName.setDisable(false);
 			fieldPrice.setDisable(false);
+			fieldGroup.setDisable(false);
 		}
 	}
 	
@@ -88,12 +92,14 @@ public class MenuEditorController {
 			checkDisabilita.setSelected(true);
 			fieldName.setDisable(true);
 			fieldPrice.setDisable(true);
+			fieldGroup.setDisable(true);
 			fieldName.setText("xxx");
 			fieldPrice.setText("0,00");
 		} else {
 			checkDisabilita.setSelected(false);
 			fieldName.setDisable(false);
 			fieldPrice.setDisable(false);
+			fieldGroup.setDisable(false);
 			fieldName.setText(it.getName());
 			fieldPrice.setText(UtilsCommon.formatCifre(it.getPrice()));
 		}
@@ -115,6 +121,7 @@ public class MenuEditorController {
 		listItemsMenu.remove(it);
 		it.setName(fieldName.getText());
 		it.setPrice(Double.valueOf(fieldPrice.getText().replace(",",".")));
+		it.setCategory(fieldGroup.getText());
 		
 		listItemsMenu.add(it);
 		menuTable.refresh();

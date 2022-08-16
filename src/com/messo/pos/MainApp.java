@@ -8,11 +8,17 @@ import com.messo.pos.view.MenuEditorController;
 import com.messo.pos.view.StatisticsController;
 
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.transform.Scale;
 import javafx.stage.Modality;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 
@@ -20,6 +26,8 @@ public class MainApp extends Application {
 	
 	private Stage primaryStage;
 	private Stage editorStage;
+
+	private static Rectangle2D screenSize = Screen.getPrimary().getBounds();
 	
 	
 	@Override
@@ -33,8 +41,13 @@ public class MainApp extends Application {
 			this.primaryStage = primaryStage;
 			AnchorPane root = new AnchorPane();
 			FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/MainPOS.fxml"));
+			if (screenSize.getWidth() > 1250)
+            	loader.setLocation(MainApp.class.getResource("view/MainPOSEnlarged.fxml"));
+			else
+				loader.setLocation(MainApp.class.getResource("view/MainPOS.fxml"));
             root = (AnchorPane) loader.load();
+
+			System.out.println("Width: " + screenSize.getWidth() + " Height: " + screenSize.getHeight());
             
             this.primaryStage.getIcons().add(new Image(getClass().getResource("/images/cashier_icon.png").toString()));
             
@@ -50,6 +63,10 @@ public class MainApp extends Application {
 
 			MainPOSController controller = loader.getController();
             controller.setMainApp(this);
+			
+			SceneSizeChangeListener sizeListener = new SceneSizeChangeListener(scene, scene.getHeight(), scene.getWidth());
+    		scene.widthProperty().addListener(sizeListener);
+    		scene.heightProperty().addListener(sizeListener);
             
             if (UtilsCommon.logFileOn) SimpleLogger.getLogger.log("INFO", "Start Application" );
             
@@ -122,6 +139,33 @@ public class MainApp extends Application {
 	
 	public Stage getPrimaryStage() {
 		return primaryStage;
+	}
+
+	private static class SceneSizeChangeListener implements ChangeListener<Number> {
+		private final Scene scene;
+		private final double initHeight;
+		private final double initWidth;
+	
+		public SceneSizeChangeListener(Scene scene, double initHeight, double initWidth) {
+		  this.scene = scene;
+		  this.initHeight = initHeight;
+		  this.initWidth = initWidth;
+		}
+	
+		@Override
+		public void changed(ObservableValue<? extends Number> observableValue, Number oldValue, Number newValue) {
+		  	final double newWidth  = scene.getWidth();
+		  	final double newHeight = scene.getHeight();
+	
+			Scale scale = new Scale(newWidth/initWidth, newHeight/initHeight);
+			scale.setPivotX(0);
+			scale.setPivotY(0);
+			scene.getRoot().getTransforms().setAll(scale);
+
+			Pane p = (Pane) scene.getRoot();
+			p.setPrefWidth (newWidth);
+			p.setPrefHeight(newHeight);
+		}
 	}
 	
 }

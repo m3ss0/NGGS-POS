@@ -1,7 +1,9 @@
 package com.messo.pos;
 
+import javafx.application.Application;
+
 public class Launcher {
     public static void main(String[] args) {
-        MainApp.main(args);
+        Application.launch(MainApp.class);
     }
 }

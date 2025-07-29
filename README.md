@@ -13,7 +13,8 @@ Use the default pom.xml, it builds a java 8 application (In Oracle Java 8 the Ja
 ### Java 11
 Use the pom-java11.xml, it builds a java 11 application where JavaFX libraries are included in the fat-jar.   
 As explained on [JavaFX website](https://openjfx.io/openjfx-docs/#maven) it is required to create a Launcher class that doesn't extend from Application (like MainApp).   
-Additionally javafx.graphics is platform dependent so all three versions (win,linux,mac) must be added to pom in order to build a portable application. Shade plugin must also be added to maven pom to specify the launche class and bundle all together.
+Additionally javafx.graphics is platform dependent so all three versions (win,linux,mac) must be added to pom in order to build a portable application. Shade plugin must also be added to maven pom to specify the launcher class and bundle all together.
+The final jar will be in target/shade folder (not in target folder)
 
 ### Jlink
 It is possible to build a modular application using jlink. It requires that all the dependencies are modules (newer codebase).

@@ -4,8 +4,11 @@ import java.awt.print.Book;
 import java.awt.print.PageFormat;
 import java.awt.print.Paper;
 import java.awt.print.PrinterJob;
+import java.text.SimpleDateFormat;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import javafx.concurrent.Task;
@@ -25,6 +28,8 @@ public class PrinterSetup extends Task<Void>{
 	}
 	
 	public void printerPrint(Menu menu, List<ComandaEntry> listComanda) {
+
+		final String printTotals = UtilsCommon.getPropertyValue("receipt.print.totals");
 
 //		PrintService defaultService = PrintServiceLookup.lookupDefaultPrintService();
 //		DocPrintJob printerJob = defaultService.createPrintJob();
@@ -69,6 +74,37 @@ public class PrinterSetup extends Task<Void>{
 				}
 			}
 		}
+
+		if (printTotals.equals("1")){
+			System.out.println("printTotals........");
+			
+			LinkedHashMap<String, Double> totaliCategoria = listComanda.stream().collect(Collectors.groupingBy(
+				ComandaEntry::getCategory,
+				LinkedHashMap::new,
+				Collectors.summingDouble(ComandaEntry::getPrice)));
+
+				totaliCategoria.put("  ", null);
+				totaliCategoria.put("TOTALE", listComanda.stream().mapToDouble(ComandaEntry::getPrice).sum());
+
+			
+			Paper paper = new Paper();
+			// 18 rappresenta altezza di ogni riga se si aumenta la dimensione del carattere è da modificare anche questo valore
+			paper.setSize(sizeX, (double) (initSizeY + (totaliCategoria.size()+2)*18.0));  
+			paper.setImageableArea(margin, margin, paper.getWidth() - margin * 2, paper.getHeight() - margin * 2);
+			documentPageFormat.setPaper(paper);
+
+			Book bookTotals = new Book();
+			bookTotals.append(new PrintableReceiptTotals(totaliCategoria),documentPageFormat);
+			printJob.setPageable(bookTotals);
+
+			try {
+					printJob.print();
+			} catch (Exception PrintException) {
+					PrintException.printStackTrace();
+			}
+			System.out.println("printTotals........END");
+		}
+			
 
 		//--- Tell the printJob to use the book as the pageable object
 //		printJob.setPageable(book);

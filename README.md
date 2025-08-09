@@ -27,3 +27,16 @@ jlink --list-deps namejar.jar
 jlink --generate-module-info . name.jar
 ```
 The latest command generate a module-info file with the dependencies found in specified jar. It can be used as a starting point.
+
+### Notes
+
+In order to simplify the compile stage in Java 8 AND Java 11, the java version can be changed with
+```shell
+sdk list java
+sdk use java 8.0.412.fx-librca
+```
+
+Then the project can be compiled using java 8 and maven (using the same console)
+```shell
+./mvnw -f pom-java8.xml clean package
+```

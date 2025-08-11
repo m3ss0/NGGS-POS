@@ -78,13 +78,14 @@ public class PrinterSetup extends Task<Void>{
 		if (printTotals.equals("1")){
 			System.out.println("printTotals........");
 			
-			LinkedHashMap<String, Double> totaliCategoria = listComanda.stream().collect(Collectors.groupingBy(
-				ComandaEntry::getCategory,
-				LinkedHashMap::new,
-				Collectors.summingDouble(ComandaEntry::getPrice)));
+			LinkedHashMap<String, Double> totaliCategoria = listComanda.stream().sorted((a1,a2) -> a1.getId() - a2.getId()).
+			    collect(Collectors.groupingBy(
+					ComandaEntry::getCategory,
+					LinkedHashMap::new,
+					Collectors.summingDouble(com -> com.getPrice() * com.getQuantity())));
 
 				totaliCategoria.put("  ", null);
-				totaliCategoria.put("TOTALE", listComanda.stream().mapToDouble(ComandaEntry::getPrice).sum());
+				totaliCategoria.put("TOTALE", listComanda.stream().mapToDouble(com -> com.getPrice() * com.getQuantity()).sum());
 
 			
 			Paper paper = new Paper();

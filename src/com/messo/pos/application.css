@@ -30,3 +30,9 @@
 	-fx-border-color:black;
 	-fx-border-width: 1;
 }
+
+#comandaTable .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-max-height: 0;
+}
+

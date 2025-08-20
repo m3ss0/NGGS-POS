@@ -19,8 +19,11 @@ public class QRCodeScannerDialog extends Stage {
     public QRCodeScannerDialog(Stage owner) {
         initOwner(owner); // Set the owner stage
         initModality(Modality.APPLICATION_MODAL); // Block interaction with other windows
-        initStyle(StageStyle.UTILITY); // A simple, undecorated window
+        //initStyle(StageStyle.UTILITY); // A simple, undecorated window
+        initStyle(StageStyle.DECORATED);
         setTitle("Scan QR Code");
+
+        setResizable(false);
 
         Label instructionLabel = new Label("Please scan the QR code now:");
         instructionLabel.setStyle("-fx-font-size: 14px; -fx-padding: 10px;");

@@ -31,8 +31,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -64,145 +62,106 @@ public class MainPOSController {
     private Label total = new Label("€ 0.00");
 
     /*PRIMI*/
-    @FXML private Spinner<Integer> spinnerP0;
     @FXML private Label LabelP0 = new Label();
     @FXML private Label LabelP0t = new Label();
 
-    @FXML private Spinner<Integer> spinnerP1;
     @FXML private Label LabelP1 = new Label();
     @FXML private Label LabelP1t = new Label();
 
-    @FXML private Spinner<Integer> spinnerP2;
     @FXML private Label LabelP2 = new Label();
     @FXML private Label LabelP2t = new Label();
 
-    @FXML private Spinner<Integer> spinnerP3;
     @FXML private Label LabelP3 = new Label();
     @FXML private Label LabelP3t = new Label();
 
-    @FXML private Spinner<Integer> spinnerP4;
     @FXML private Label LabelP4 = new Label();
     @FXML private Label LabelP4t = new Label();
 
-    @FXML private Spinner<Integer> spinnerP5;
     @FXML private Label LabelP5 = new Label();
     @FXML private Label LabelP5t = new Label();
 
     /*SECONDI*/
-    @FXML private Spinner<Integer> spinnerS0;
     @FXML private Label LabelS0 = new Label();
     @FXML private Label LabelS0t = new Label();
 
-    @FXML private Spinner<Integer> spinnerS1;
     @FXML private Label LabelS1 = new Label();
     @FXML private Label LabelS1t = new Label();
 
-    @FXML private Spinner<Integer> spinnerS2;
     @FXML private Label LabelS2 = new Label();
     @FXML private Label LabelS2t = new Label();
 
-    @FXML private Spinner<Integer> spinnerS3;
     @FXML private Label LabelS3 = new Label();
     @FXML private Label LabelS3t = new Label();
 
-    @FXML private Spinner<Integer> spinnerS4;
     @FXML private Label LabelS4 = new Label();
     @FXML private Label LabelS4t = new Label();
 
-    @FXML private Spinner<Integer> spinnerS5;
     @FXML private Label LabelS5 = new Label();
     @FXML private Label LabelS5t = new Label();
 
-    @FXML private Spinner<Integer> spinnerS6;
     @FXML private Label LabelS6 = new Label();
     @FXML private Label LabelS6t = new Label();
 
-    @FXML private Spinner<Integer> spinnerS7;
     @FXML private Label LabelS7 = new Label();
     @FXML private Label LabelS7t = new Label();
 
-    @FXML private Spinner<Integer> spinnerS8;
     @FXML private Label LabelS8 = new Label();
     @FXML private Label LabelS8t = new Label();
 
     /*FRITTO*/
-    @FXML private Spinner<Integer> spinnerF0;
     @FXML private Label LabelF0 = new Label();
     @FXML private Label LabelF0t = new Label();
 
-    @FXML private Spinner<Integer> spinnerF1;
     @FXML private Label LabelF1 = new Label();
     @FXML private Label LabelF1t = new Label();
 
-    @FXML private Spinner<Integer> spinnerF2;
     @FXML private Label LabelF2 = new Label();
     @FXML private Label LabelF2t = new Label();
 
-    @FXML private Spinner<Integer> spinnerF3;
     @FXML private Label LabelF3 = new Label();
     @FXML private Label LabelF3t = new Label();
 
-    @FXML private Spinner<Integer> spinnerF4;
     @FXML private Label LabelF4 = new Label();
     @FXML private Label LabelF4t = new Label();
 
-    @FXML private Spinner<Integer> spinnerF5;
     @FXML private Label LabelF5 = new Label();
     @FXML private Label LabelF5t = new Label();
 
     /*BEVANDE*/
-    @FXML private Spinner<Integer> spinnerB0;
     @FXML private Label LabelB0 = new Label();
     @FXML private Label LabelB0t = new Label();
-    @FXML private Spinner<Integer> spinnerB1;
     @FXML private Label LabelB1 = new Label();
     @FXML private Label LabelB1t = new Label();
-    @FXML private Spinner<Integer> spinnerB2;
     @FXML private Label LabelB2 = new Label();
     @FXML private Label LabelB2t = new Label();
-    @FXML private Spinner<Integer> spinnerB3;
     @FXML private Label LabelB3 = new Label();
     @FXML private Label LabelB3t = new Label();
-    @FXML private Spinner<Integer> spinnerB4;
     @FXML private Label LabelB4 = new Label();
     @FXML private Label LabelB4t = new Label();
-    @FXML private Spinner<Integer> spinnerB5;
     @FXML private Label LabelB5 = new Label();
     @FXML private Label LabelB5t = new Label();
-    @FXML private Spinner<Integer> spinnerB6;
     @FXML private Label LabelB6 = new Label();
     @FXML private Label LabelB6t = new Label();
-    @FXML private Spinner<Integer> spinnerB7;
     @FXML private Label LabelB7 = new Label();
     @FXML private Label LabelB7t = new Label();
-    @FXML private Spinner<Integer> spinnerB8;
     @FXML private Label LabelB8 = new Label();
     @FXML private Label LabelB8t = new Label();
-    @FXML private Spinner<Integer> spinnerB9;
     @FXML private Label LabelB9 = new Label();
     @FXML private Label LabelB9t = new Label();
-    @FXML private Spinner<Integer> spinnerB10;
     @FXML private Label LabelB10 = new Label();
     @FXML private Label LabelB10t = new Label();
-    @FXML private Spinner<Integer> spinnerB11;
     @FXML private Label LabelB11 = new Label();
     @FXML private Label LabelB11t = new Label();
-    @FXML private Spinner<Integer> spinnerB12;
     @FXML private Label LabelB12 = new Label();
     @FXML private Label LabelB12t = new Label();
-    @FXML private Spinner<Integer> spinnerB13;
     @FXML private Label LabelB13 = new Label();
     @FXML private Label LabelB13t = new Label();
-    @FXML private Spinner<Integer> spinnerB14;
     @FXML private Label LabelB14 = new Label();
     @FXML private Label LabelB14t = new Label();
-    @FXML private Spinner<Integer> spinnerB15;
     @FXML private Label LabelB15 = new Label();
     @FXML private Label LabelB15t = new Label();
-    @FXML private Spinner<Integer> spinnerB16;
     @FXML private Label LabelB16 = new Label();
     @FXML private Label LabelB16t = new Label();
-    @FXML private Spinner<Integer> spinnerB17;
     @FXML private Label LabelB17 = new Label();
     @FXML private Label LabelB17t = new Label();
 
@@ -323,436 +282,317 @@ public class MainPOSController {
             System.err.println("FontAwesome errors");
         }
 
-        spinnerP0.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelP0.setText(menu.getMenu().get("1").getName());
         LabelP0t.setText(UtilsCommon.formatCifre(menu.getMenu().get("1").getPrice()));
-        if (menu.getMenu().get("1").getName().equals("xxx")) spinnerP0.setDisable(true);
 
 		if(!LabelP0.getText().equals("xxx")) {
 			buttonPlusP0.setOnMouseClicked(event -> addRemoveComanda("1", 1));
 			buttonMinusP0.setOnMouseClicked(event -> addRemoveComanda("1", -1));
 		}
 
-        spinnerP1.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelP1.setText(menu.getMenu().get("2").getName());
         LabelP1t.setText(UtilsCommon.formatCifre(menu.getMenu().get("2").getPrice()));
-        if (menu.getMenu().get("2").getName().equals("xxx")) spinnerP1.setDisable(true);
 
 		if(!LabelP1.getText().equals("xxx")) {
 			buttonPlusP1.setOnMouseClicked(event -> addRemoveComanda("2", 1));
 			buttonMinusP1.setOnMouseClicked(event -> addRemoveComanda("2", -1));
 		}
 
-        spinnerP2.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelP2.setText(menu.getMenu().get("3").getName());
         LabelP2t.setText(UtilsCommon.formatCifre(menu.getMenu().get("3").getPrice()));
-        if (menu.getMenu().get("3").getName().equals("xxx")) spinnerP2.setDisable(true);
 
 		if(!LabelP2.getText().equals("xxx")) {
 			buttonPlusP2.setOnMouseClicked(event -> addRemoveComanda("3", 1));
 			buttonMinusP2.setOnMouseClicked(event -> addRemoveComanda("3", -1));
 		}
 
-        spinnerP3.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelP3.setText(menu.getMenu().get("4").getName());
         LabelP3t.setText(UtilsCommon.formatCifre(menu.getMenu().get("4").getPrice()));
-        if (menu.getMenu().get("4").getName().equals("xxx")) spinnerP3.setDisable(true);
 
 		if(!LabelP3.getText().equals("xxx")) {
 			buttonPlusP3.setOnMouseClicked(event -> addRemoveComanda("4", 1));
 			buttonMinusP3.setOnMouseClicked(event -> addRemoveComanda("4", -1));
 		}
 
-        spinnerP4.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelP4.setText(menu.getMenu().get("5").getName());
         LabelP4t.setText(UtilsCommon.formatCifre(menu.getMenu().get("5").getPrice()));
-        if (menu.getMenu().get("5").getName().equals("xxx")) spinnerP4.setDisable(true);
 
 		if(!LabelP4.getText().equals("xxx")) {
 			buttonPlusP4.setOnMouseClicked(event -> addRemoveComanda("5", 1));
 			buttonMinusP4.setOnMouseClicked(event -> addRemoveComanda("5", -1));
 		}
 
-        spinnerP5.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelP5.setText(menu.getMenu().get("6").getName());
         LabelP5t.setText(UtilsCommon.formatCifre(menu.getMenu().get("6").getPrice()));
-        if (menu.getMenu().get("6").getName().equals("xxx")) spinnerP5.setDisable(true);
 
 		if(!LabelP5.getText().equals("xxx")) {
 			buttonPlusP5.setOnMouseClicked(event -> addRemoveComanda("6", 1));
 			buttonMinusP5.setOnMouseClicked(event -> addRemoveComanda("6", -1));
 		}
 
-        spinnerS0.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelS0.setText(menu.getMenu().get("10").getName());
         LabelS0t.setText(UtilsCommon.formatCifre(menu.getMenu().get("10").getPrice()));
-        if (menu.getMenu().get("10").getName().equals("xxx")) spinnerS0.setDisable(true);
 
 		if(!LabelS0.getText().equals("xxx")) {
 			buttonPlusS0.setOnMouseClicked(event -> addRemoveComanda("10", 1));
 			buttonMinusS0.setOnMouseClicked(event -> addRemoveComanda("10", -1));
 		}
 
-        spinnerS1.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelS1.setText(menu.getMenu().get("11").getName());
         LabelS1t.setText(UtilsCommon.formatCifre(menu.getMenu().get("11").getPrice()));
-        if (menu.getMenu().get("11").getName().equals("xxx")) spinnerS1.setDisable(true);
 
 		if(!LabelS1.getText().equals("xxx")) {
 			buttonPlusS1.setOnMouseClicked(event -> addRemoveComanda("11", 1));
 			buttonMinusS1.setOnMouseClicked(event -> addRemoveComanda("11", -1));
 		}
 
-        spinnerS2.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelS2.setText(menu.getMenu().get("12").getName());
         LabelS2t.setText(UtilsCommon.formatCifre(menu.getMenu().get("12").getPrice()));
-        if (menu.getMenu().get("12").getName().equals("xxx")) spinnerS2.setDisable(true);
 
 		if(!LabelS2.getText().equals("xxx")) {
 			buttonPlusS2.setOnMouseClicked(event -> addRemoveComanda("12", 1));
 			buttonMinusS2.setOnMouseClicked(event -> addRemoveComanda("12", -1));
 		}
 
-        spinnerS3.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelS3.setText(menu.getMenu().get("13").getName());
         LabelS3t.setText(UtilsCommon.formatCifre(menu.getMenu().get("13").getPrice()));
-        if (menu.getMenu().get("13").getName().equals("xxx")) spinnerS3.setDisable(true);
 
 		if(!LabelS3.getText().equals("xxx")) {
 			buttonPlusS3.setOnMouseClicked(event -> addRemoveComanda("13", 1));
 			buttonMinusS3.setOnMouseClicked(event -> addRemoveComanda("13", -1));
 		}
 
-        spinnerS4.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelS4.setText(menu.getMenu().get("14").getName());
         LabelS4t.setText(UtilsCommon.formatCifre(menu.getMenu().get("14").getPrice()));    	
-        if (menu.getMenu().get("14").getName().equals("xxx")) spinnerS4.setDisable(true);
 
 		if(!LabelS4.getText().equals("xxx")) {
 			buttonPlusS4.setOnMouseClicked(event -> addRemoveComanda("14", 1));
 			buttonMinusS4.setOnMouseClicked(event -> addRemoveComanda("14", -1));
 		}
 
-        spinnerS5.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelS5.setText(menu.getMenu().get("15").getName());
         LabelS5t.setText(UtilsCommon.formatCifre(menu.getMenu().get("15").getPrice()));
-        if (menu.getMenu().get("15").getName().equals("xxx")) spinnerS5.setDisable(true);
 
 		if(!LabelS5.getText().equals("xxx")) {
 			buttonPlusS5.setOnMouseClicked(event -> addRemoveComanda("15", 1));
 			buttonMinusS5.setOnMouseClicked(event -> addRemoveComanda("15", -1));
 		}
 
-        spinnerS6.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelS6.setText(menu.getMenu().get("16").getName());
         LabelS6t.setText(UtilsCommon.formatCifre(menu.getMenu().get("16").getPrice()));
-        if (menu.getMenu().get("16").getName().equals("xxx")) spinnerS6.setDisable(true);
 
 		if(!LabelS6.getText().equals("xxx")) {
 			buttonPlusS6.setOnMouseClicked(event -> addRemoveComanda("16", 1));
 			buttonMinusS6.setOnMouseClicked(event -> addRemoveComanda("16", -1));
 		}
 
-        spinnerS7.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelS7.setText(menu.getMenu().get("17").getName());
         LabelS7t.setText(UtilsCommon.formatCifre(menu.getMenu().get("17").getPrice()));
-        if (menu.getMenu().get("17").getName().equals("xxx")) spinnerS7.setDisable(true);
 
 		if(!LabelS7.getText().equals("xxx")) {
 			buttonPlusS7.setOnMouseClicked(event -> addRemoveComanda("17", 1));
 			buttonMinusS7.setOnMouseClicked(event -> addRemoveComanda("17", -1));
 		}
 
-        spinnerS8.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelS8.setText(menu.getMenu().get("18").getName());
         LabelS8t.setText(UtilsCommon.formatCifre(menu.getMenu().get("18").getPrice()));
-        if (menu.getMenu().get("18").getName().equals("xxx")) spinnerS8.setDisable(true);
 
 		if(!LabelS8.getText().equals("xxx")) {
 			buttonPlusS8.setOnMouseClicked(event -> addRemoveComanda("18", 1));
 			buttonMinusS8.setOnMouseClicked(event -> addRemoveComanda("18", -1));
 		}
 
-        spinnerF0.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelF0.setText(menu.getMenu().get("20").getName());
         LabelF0t.setText(UtilsCommon.formatCifre(menu.getMenu().get("20").getPrice()));
-        if (menu.getMenu().get("20").getName().equals("xxx")) spinnerF0.setDisable(true);
 
 		if(!LabelF0.getText().equals("xxx")) {
 			buttonPlusF0.setOnMouseClicked(event -> addRemoveComanda("20", 1));
 			buttonMinusF0.setOnMouseClicked(event -> addRemoveComanda("20", -1));
 		}
 
-        spinnerF1.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelF1.setText(menu.getMenu().get("21").getName());
         LabelF1t.setText(UtilsCommon.formatCifre(menu.getMenu().get("21").getPrice()));
-        if (menu.getMenu().get("21").getName().equals("xxx")) spinnerF1.setDisable(true);
 
 		if(!LabelF1.getText().equals("xxx")) {
 			buttonPlusF1.setOnMouseClicked(event -> addRemoveComanda("21", 1));
 			buttonMinusF1.setOnMouseClicked(event -> addRemoveComanda("21", -1));
 		}
 
-        spinnerF2.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelF2.setText(menu.getMenu().get("22").getName());
         LabelF2t.setText(UtilsCommon.formatCifre(menu.getMenu().get("22").getPrice()));
-        if (menu.getMenu().get("22").getName().equals("xxx")) spinnerF2.setDisable(true);
 
 		if(!LabelF2.getText().equals("xxx")) {
 			buttonPlusF2.setOnMouseClicked(event -> addRemoveComanda("22", 1));
 			buttonMinusF2.setOnMouseClicked(event -> addRemoveComanda("22", -1));
 		}
 
-        spinnerF3.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelF3.setText(menu.getMenu().get("23").getName());
         LabelF3t.setText(UtilsCommon.formatCifre(menu.getMenu().get("23").getPrice()));
-        if (menu.getMenu().get("23").getName().equals("xxx")) spinnerF3.setDisable(true);
 
 		if(!LabelF3.getText().equals("xxx")) {
 			buttonPlusF3.setOnMouseClicked(event -> addRemoveComanda("23", 1));
 			buttonMinusF3.setOnMouseClicked(event -> addRemoveComanda("23", -1));
 		}
 
-        spinnerF4.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelF4.setText(menu.getMenu().get("24").getName());
         LabelF4t.setText(UtilsCommon.formatCifre(menu.getMenu().get("24").getPrice()));    	
-        if (menu.getMenu().get("24").getName().equals("xxx")) spinnerF4.setDisable(true);
 
 		if(!LabelF4.getText().equals("xxx")) {
 			buttonPlusF4.setOnMouseClicked(event -> addRemoveComanda("24", 1));
 			buttonMinusF4.setOnMouseClicked(event -> addRemoveComanda("24", -1));
 		}
 
-        spinnerF5.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelF5.setText(menu.getMenu().get("25").getName());
         LabelF5t.setText(UtilsCommon.formatCifre(menu.getMenu().get("25").getPrice()));    	
-        if (menu.getMenu().get("25").getName().equals("xxx")) spinnerF5.setDisable(true);
 
 		if(!LabelF5.getText().equals("xxx")) {
 			buttonPlusF5.setOnMouseClicked(event -> addRemoveComanda("25", 1));
 			buttonMinusF5.setOnMouseClicked(event -> addRemoveComanda("25", -1));
 		}
 
-        spinnerB0.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB0.setText(menu.getMenu().get("30").getName());
         LabelB0t.setText(UtilsCommon.formatCifre(menu.getMenu().get("30").getPrice()));
-        if (menu.getMenu().get("30").getName().equals("xxx")) spinnerB0.setDisable(true);
 
 		if(!LabelB0.getText().equals("xxx")) {
 			buttonPlusB0.setOnMouseClicked(event -> addRemoveComanda("30", 1));
 			buttonMinusB0.setOnMouseClicked(event -> addRemoveComanda("30", -1));
 		}
 
-        spinnerB1.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB1.setText(menu.getMenu().get("31").getName());
         LabelB1t.setText(UtilsCommon.formatCifre(menu.getMenu().get("31").getPrice()));
-        if (menu.getMenu().get("31").getName().equals("xxx")) spinnerB1.setDisable(true);
 
 		if(!LabelB1.getText().equals("xxx")) {
 			buttonPlusB1.setOnMouseClicked(event -> addRemoveComanda("31", 1));
 			buttonMinusB1.setOnMouseClicked(event -> addRemoveComanda("31", -1));
 		}
 
-        spinnerB2.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB2.setText(menu.getMenu().get("32").getName());
         LabelB2t.setText(UtilsCommon.formatCifre(menu.getMenu().get("32").getPrice()));
-        if (menu.getMenu().get("32").getName().equals("xxx")) spinnerB2.setDisable(true);
 
 		if(!LabelB2.getText().equals("xxx")) {
 			buttonPlusB2.setOnMouseClicked(event -> addRemoveComanda("32", 1));
 			buttonMinusB2.setOnMouseClicked(event -> addRemoveComanda("32", -1));
 		}		
 
-        spinnerB3.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB3.setText(menu.getMenu().get("33").getName());
         LabelB3t.setText(UtilsCommon.formatCifre(menu.getMenu().get("33").getPrice()));
-        if (menu.getMenu().get("33").getName().equals("xxx")) spinnerB3.setDisable(true);
 
 		if(!LabelB3.getText().equals("xxx")) {
 			buttonPlusB3.setOnMouseClicked(event -> addRemoveComanda("33", 1));
 			buttonMinusB3.setOnMouseClicked(event -> addRemoveComanda("33", -1));
 		}
 
-        spinnerB4.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB4.setText(menu.getMenu().get("34").getName());
         LabelB4t.setText(UtilsCommon.formatCifre(menu.getMenu().get("34").getPrice()));
-        if (menu.getMenu().get("34").getName().equals("xxx")) spinnerB4.setDisable(true);
 
 		if(!LabelB4.getText().equals("xxx")) {
 			buttonPlusB4.setOnMouseClicked(event -> addRemoveComanda("34", 1));
 			buttonMinusB4.setOnMouseClicked(event -> addRemoveComanda("34", -1));
 		}
 
-        spinnerB5.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB5.setText(menu.getMenu().get("35").getName());
         LabelB5t.setText(UtilsCommon.formatCifre(menu.getMenu().get("35").getPrice()));
-        if (menu.getMenu().get("35").getName().equals("xxx")) spinnerB5.setDisable(true);
 
 		if(!LabelB5.getText().equals("xxx")) {
 			buttonPlusB5.setOnMouseClicked(event -> addRemoveComanda("35", 1));
 			buttonMinusB5.setOnMouseClicked(event -> addRemoveComanda("35", -1));
 		}
 
-        spinnerB6.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB6.setText(menu.getMenu().get("36").getName());
         LabelB6t.setText(UtilsCommon.formatCifre(menu.getMenu().get("36").getPrice()));
-        if (menu.getMenu().get("36").getName().equals("xxx")) spinnerB6.setDisable(true);
 
 		if(!LabelB6.getText().equals("xxx")) {
 			buttonPlusB6.setOnMouseClicked(event -> addRemoveComanda("36", 1));
 			buttonMinusB6.setOnMouseClicked(event -> addRemoveComanda("36", -1));
 		}
 
-        spinnerB7.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB7.setText(menu.getMenu().get("37").getName());
         LabelB7t.setText(UtilsCommon.formatCifre(menu.getMenu().get("37").getPrice()));
-        if (menu.getMenu().get("37").getName().equals("xxx")) spinnerB7.setDisable(true);
 
 		if(!LabelB7.getText().equals("xxx")) {
 			buttonPlusB7.setOnMouseClicked(event -> addRemoveComanda("37", 1));
 			buttonMinusB7.setOnMouseClicked(event -> addRemoveComanda("37", -1));
 		}
 
-        spinnerB8.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB8.setText(menu.getMenu().get("38").getName());
         LabelB8t.setText(UtilsCommon.formatCifre(menu.getMenu().get("38").getPrice()));
-        if (menu.getMenu().get("38").getName().equals("xxx")) spinnerB8.setDisable(true);
 
 		if(!LabelB8.getText().equals("xxx")) {
 			buttonPlusB8.setOnMouseClicked(event -> addRemoveComanda("38", 1));
 			buttonMinusB8.setOnMouseClicked(event -> addRemoveComanda("38", -1));
 		}
 
-        spinnerB9.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB9.setText(menu.getMenu().get("39").getName());
         LabelB9t.setText(UtilsCommon.formatCifre(menu.getMenu().get("39").getPrice()));
-        if (menu.getMenu().get("39").getName().equals("xxx")) spinnerB9.setDisable(true);
 
 		if(!LabelB9.getText().equals("xxx")) {
 			buttonPlusB9.setOnMouseClicked(event -> addRemoveComanda("39", 1));
 			buttonMinusB9.setOnMouseClicked(event -> addRemoveComanda("39", -1));
 		}
 
-        spinnerB10.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB10.setText(menu.getMenu().get("40").getName());
         LabelB10t.setText(UtilsCommon.formatCifre(menu.getMenu().get("40").getPrice()));
-        if (menu.getMenu().get("40").getName().equals("xxx")) spinnerB10.setDisable(true);
 
 		if(!LabelB10.getText().equals("xxx")) {
 			buttonPlusB10.setOnMouseClicked(event -> addRemoveComanda("40", 1));
 			buttonMinusB10.setOnMouseClicked(event -> addRemoveComanda("40", -1));
 		}
 
-        spinnerB11.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB11.setText(menu.getMenu().get("41").getName());
         LabelB11t.setText(UtilsCommon.formatCifre(menu.getMenu().get("41").getPrice()));
-        if (menu.getMenu().get("41").getName().equals("xxx")) spinnerB11.setDisable(true);
 
 		if(!LabelB11.getText().equals("xxx")) {
 			buttonPlusB11.setOnMouseClicked(event -> addRemoveComanda("41", 1));
 			buttonMinusB11.setOnMouseClicked(event -> addRemoveComanda("41", -1));
 		}
 
-        spinnerB12.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB12.setText(menu.getMenu().get("42").getName());
         LabelB12t.setText(UtilsCommon.formatCifre(menu.getMenu().get("42").getPrice()));
-        if (menu.getMenu().get("42").getName().equals("xxx")) spinnerB12.setDisable(true);
 
 		if(!LabelB12.getText().equals("xxx")) {
 			buttonPlusB12.setOnMouseClicked(event -> addRemoveComanda("42", 1));
 			buttonMinusB12.setOnMouseClicked(event -> addRemoveComanda("42", -1));
 		}
 
-        spinnerB13.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB13.setText(menu.getMenu().get("43").getName());
         LabelB13t.setText(UtilsCommon.formatCifre(menu.getMenu().get("43").getPrice()));
-        if (menu.getMenu().get("43").getName().equals("xxx")) spinnerB13.setDisable(true);
 
 		if(!LabelB13.getText().equals("xxx")) {
 			buttonPlusB13.setOnMouseClicked(event -> addRemoveComanda("43", 1));
 			buttonMinusB13.setOnMouseClicked(event -> addRemoveComanda("43", -1));
 		}
 
-        spinnerB14.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB14.setText(menu.getMenu().get("44") != null ? menu.getMenu().get("44").getName() : "xxx");
         LabelB14t.setText(UtilsCommon.formatCifre(menu.getMenu().get("44").getPrice()));
-        if (menu.getMenu().get("44").getName().equals("xxx")) spinnerB14.setDisable(true);
 
 		if(!LabelB14.getText().equals("xxx")) {
 			buttonPlusB14.setOnMouseClicked(event -> addRemoveComanda("44", 1));
 			buttonMinusB14.setOnMouseClicked(event -> addRemoveComanda("44", -1));
 		}
 
-        spinnerB15.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB15.setText(menu.getMenu().get("45") != null ? menu.getMenu().get("45").getName() : "xxx");
         LabelB15t.setText(UtilsCommon.formatCifre(menu.getMenu().get("45").getPrice()));
-        if (menu.getMenu().get("45").getName().equals("xxx")) spinnerB15.setDisable(true);
 
 		if(!LabelB15.getText().equals("xxx")) {
 			buttonPlusB15.setOnMouseClicked(event -> addRemoveComanda("45", 1));
 			buttonMinusB15.setOnMouseClicked(event -> addRemoveComanda("45", -1));
 		}
 
-        spinnerB16.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB16.setText(menu.getMenu().get("46") != null ? menu.getMenu().get("46").getName() : "xxx");
         LabelB16t.setText(UtilsCommon.formatCifre(menu.getMenu().get("46").getPrice()));
-        if (menu.getMenu().get("46").getName().equals("xxx")) spinnerB16.setDisable(true);
 
 		if(!LabelB16.getText().equals("xxx")) {
 			buttonPlusB16.setOnMouseClicked(event -> addRemoveComanda("46", 1));
 			buttonMinusB16.setOnMouseClicked(event -> addRemoveComanda("46", -1));
 		}
 
-        spinnerB17.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50));
         LabelB17.setText(menu.getMenu().get("47") != null ? menu.getMenu().get("47").getName() : "xxx");
         LabelB17t.setText(UtilsCommon.formatCifre(menu.getMenu().get("47").getPrice()));
-        if (menu.getMenu().get("47").getName().equals("xxx")) spinnerB17.setDisable(true);
 
 		if(!LabelB17.getText().equals("xxx")) {
 			buttonPlusB17.setOnMouseClicked(event -> addRemoveComanda("47", 1));
 			buttonMinusB17.setOnMouseClicked(event -> addRemoveComanda("47", -1));
 		}
-
-        
-        spinnerP0.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("1", newValue));
-        spinnerP1.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("2", newValue));
-        spinnerP2.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("3", newValue));
-        spinnerP3.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("4", newValue));
-        spinnerP4.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("5", newValue));
-        spinnerP5.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("6", newValue));
-        spinnerS0.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("10", newValue));
-        spinnerS1.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("11", newValue));
-        spinnerS2.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("12", newValue));
-        spinnerS3.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("13", newValue));
-        spinnerS4.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("14", newValue));
-        spinnerS5.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("15", newValue));
-        spinnerS6.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("16", newValue));
-        spinnerS7.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("17", newValue));
-        spinnerS8.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("18", newValue));
-        spinnerF0.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("20", newValue));
-        spinnerF1.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("21", newValue));
-        spinnerF2.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("22", newValue));
-        spinnerF3.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("23", newValue));
-        spinnerF4.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("24", newValue));
-        spinnerF5.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("25", newValue));
-        spinnerB0.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("30", newValue));
-        spinnerB1.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("31", newValue));
-        spinnerB2.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("32", newValue));
-        spinnerB3.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("33", newValue));
-        spinnerB4.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("34", newValue));
-        spinnerB5.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("35", newValue));
-        spinnerB6.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("36", newValue));
-        spinnerB7.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("37", newValue));
-        spinnerB8.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("38", newValue));
-        spinnerB9.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("39", newValue));
-        spinnerB10.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("40", newValue));
-        spinnerB11.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("41", newValue));
-        spinnerB12.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("42", newValue));
-        spinnerB13.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("43", newValue));
-        spinnerB14.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("44", newValue));
-        spinnerB15.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("45", newValue));
-        spinnerB16.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("46", newValue));
-        spinnerB17.valueProperty().addListener((observable,oldValue,newValue) -> aggiungiComanda("47", newValue));
 
         comandaTable.setItems(null);
 
@@ -765,8 +605,6 @@ public class MainPOSController {
 
         // force the field to be numeric only
         contanteResto.textProperty().addListener((observable,oldValue,newValue) -> calcolaResto(newValue));
-
-        addEventFilterToSpinner();
 
         LabelAlert.setVisible(false);
 
@@ -923,45 +761,6 @@ public class MainPOSController {
 
     @FXML
     public void handleAzzera(){
-        spinnerP0.getValueFactory().setValue(0);
-        spinnerP1.getValueFactory().setValue(0);
-        spinnerP2.getValueFactory().setValue(0);
-        spinnerP3.getValueFactory().setValue(0);
-        spinnerP4.getValueFactory().setValue(0);
-        spinnerP5.getValueFactory().setValue(0);
-        spinnerS0.getValueFactory().setValue(0);
-        spinnerS1.getValueFactory().setValue(0);
-        spinnerS2.getValueFactory().setValue(0);
-        spinnerS3.getValueFactory().setValue(0);
-        spinnerS4.getValueFactory().setValue(0);
-        spinnerS5.getValueFactory().setValue(0);
-        spinnerS6.getValueFactory().setValue(0);
-        spinnerS7.getValueFactory().setValue(0);
-        spinnerS8.getValueFactory().setValue(0);
-        spinnerF0.getValueFactory().setValue(0);
-        spinnerF1.getValueFactory().setValue(0);
-        spinnerF2.getValueFactory().setValue(0);
-        spinnerF3.getValueFactory().setValue(0);
-        spinnerF4.getValueFactory().setValue(0);
-        spinnerF5.getValueFactory().setValue(0);
-        spinnerB0.getValueFactory().setValue(0);
-        spinnerB1.getValueFactory().setValue(0);
-        spinnerB2.getValueFactory().setValue(0);
-        spinnerB3.getValueFactory().setValue(0);
-        spinnerB4.getValueFactory().setValue(0);
-        spinnerB5.getValueFactory().setValue(0);
-        spinnerB6.getValueFactory().setValue(0);
-        spinnerB7.getValueFactory().setValue(0);
-        spinnerB8.getValueFactory().setValue(0);
-        spinnerB9.getValueFactory().setValue(0);
-        spinnerB10.getValueFactory().setValue(0);
-        spinnerB11.getValueFactory().setValue(0);
-        spinnerB12.getValueFactory().setValue(0);
-        spinnerB13.getValueFactory().setValue(0);
-        spinnerB14.getValueFactory().setValue(0);
-        spinnerB15.getValueFactory().setValue(0);
-        spinnerB16.getValueFactory().setValue(0);
-        spinnerB17.getValueFactory().setValue(0);
 
         azzeraComanda();
 
@@ -1018,47 +817,6 @@ public class MainPOSController {
         contanteResto.setText(String.valueOf((int) Math.ceil(comanda.getTotale()/10) * 10));
     }
 
-    private void addEventFilterToSpinner(){
-        spinnerP0.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerP1.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerP2.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerP3.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerP4.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerP5.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerS0.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerS1.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerS2.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerS3.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerS4.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerS5.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerS6.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerS7.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerS8.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerF0.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerF1.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerF2.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerF3.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerF4.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerF5.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB0.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB1.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB2.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB3.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB4.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB5.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB6.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB7.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB8.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB9.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB10.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB11.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB12.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB13.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB14.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB15.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB16.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-        spinnerB17.addEventFilter(MouseEvent.MOUSE_PRESSED, ae -> checkEventAlreadyPrinted(ae));
-    }
 
     private void checkEventAlreadyPrinted(MouseEvent me){
         if (alreadyPrinted){

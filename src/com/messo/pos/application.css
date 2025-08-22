@@ -36,3 +36,41 @@
     -fx-max-height: 0;
 }
 
+#comandaTable .table-row-cell {
+    -fx-cell-size: 23px;
+}
+
+#comandaTable .table-row-cell:odd {
+    -fx-background-color: #F8F8F8;
+}
+
+#comandaTable .table-row-cell:even {
+    -fx-background-color: #e9e9e9;
+}
+
+#comandaTable .table-cell {
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 5px;
+}
+
+#comandaTable .column-header-background {
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+}
+
+.clickable-pane {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.0, 0, 3);
+    -fx-transition: -fx-background-color 0.1s ease-out, -fx-effect 0.1s ease-out; /* Smooth transition */
+}
+
+.clickable-pane:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.0, 0, 4); /* More pronounced shadow on hover */
+}
+
+.clickable-pane:pressed {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0.0, 0, 1); /* Smaller, tighter shadow when pressed */
+    -fx-translate-y: 1px; /* Moves the pane down slightly for a "pressed" look */
+}
+
+

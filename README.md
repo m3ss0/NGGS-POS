@@ -40,3 +40,8 @@ Then the project can be compiled using java 8 and maven (using the same console)
 ```shell
 ./mvnw -f pom-java8.xml clean package
 ```
+
+You can run the application with
+```shell
+./mvnw javafx:run
+```
